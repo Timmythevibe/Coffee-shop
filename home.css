@@ -1,0 +1,478 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body{
+    background: #1f0e01;
+}
+
+header{
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1;
+    padding: 20px;
+}
+
+header .navbar{
+    max-width: 1280px;
+    margin: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo {
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.navbar .menu-links{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 30px;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar .menu-links li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar .menu-links .language-item a{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.navbar .menu-links .language-item span{
+    font-size: 1.3rem;
+}
+
+.navbar .menu-links li a:hover{
+    color: #1dbf73;
+}
+
+.navbar .menu-links .join-btn a{
+    border: 1px solid #fff;
+    padding: 8px 15px;
+    border-radius: 4px;
+}
+
+.navbar .menu-links.join-btn a:hover{
+    color: #fff;
+    border-color: transparent;
+    background: #1dbf73;
+}
+
+
+/* HERO SECTION STYLING */
+
+.hero-section{
+    height: 100vh;
+    background-image: url('./assets/homeback.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    padding: 0 20px;
+    align-items: center;
+}
+
+.hero-section .content{
+    max-width: 1280px;
+    margin: 0 auto 40px;
+    width: 100%;
+}
+
+.hero-section .content h2 {
+    color: #fff;
+    font-size: 3rem;
+    max-width: 600px;
+    line-height: 70px;
+}
+
+.hero-section .content p {
+    color: #fff;
+    font-weight: 300;
+    max-width: 600px;
+    margin-top: 15px;
+}
+
+.hero-section .search-form{
+    height: 48px;
+    display: flex;
+    max-width: 630px;
+    margin-top: 30px;
+}
+
+.hero-section .search-form input{
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 0 15px;
+    font-size: 1rem;
+    border-radius: 4px 0 0 4px;
+}
+
+.hero-section .search-form button{
+    height: 100%;
+    width: 90px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #1f0e01;
+    color: #fff;
+    border-radius: 0 4px 4px 0;
+    transition: background 0.2s ease;
+}
+
+.hero-section .search-form button:hover{
+    background: #1dbf73;
+}
+
+.hero-section .popular-tags{
+    display: flex;
+    color: #fff;
+    gap: 25px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-top: 25px;
+}
+
+.hero-section .popular-tags .tags{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    list-style: none; 
+}
+
+.hero-section .tags li a{
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 4px 12px;
+    border-radius: 50px;
+    transition: 0.2s ease;
+}
+
+.hero-section .tags li a:hover{
+    color: #000000;
+    background: #fff;
+}
+
+
+@media screen and (max-width: 900px) {
+    
+    .navbar .menu-links{
+        height: 100vh;
+        max-width: 300px;
+        width: 100%;
+        background: #fff;
+        position: fixed;
+        left: -300px;
+        top: 0;
+        display: block;
+        padding: 75px 40px 0;
+        transition: left 0.2s ease;
+    }
+
+    .navbar .menu-links li{
+        margin-bottom: 30px;
+    }
+
+    .navbar .menu-links li{
+        color: #000;
+        font-size: 1.1rem;
+    }
+    
+    .navbar .menu-links .join-btn a{
+        padding: 0;
+    }
+    
+    .navbar .menu-links .join-btn a:hover{
+        color: #1dbf73;
+        background: none;
+    }
+    
+    .hero-section{
+        background: none;
+    }
+
+    .hero-section .content{
+        margin: 0 auto 80px;
+    }
+
+    .hero-section .content :is(hi, .search-form){
+        max-width: 100%;
+    }
+
+    .hero-section .content h1{
+        text-align: center;
+        font-size: 2.5rem;
+        line-height: 55px;
+    }
+
+    .hero-section .search-form{
+        display: block;
+        margin-top: 20px;
+    }
+
+    .hero-section .search-form input{
+        border-radius: 4px;
+    }
+
+    .hero-section .search-form button{
+        margin-top: 10px;
+        border-radius: 4px;
+        width: 100%;
+    }
+
+    .hero-section .popular-tags{
+       display: none;
+    }
+
+}
+
+
+/* SECOND SECTION STYLING */
+
+.card-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax( 300px, 1fr ) );
+    max-width: 1250px;
+    margin: 150px auto;
+    padding: 20px;
+    gap: 20px;
+}
+
+.card-list .card-item{
+    background: #fff;
+    padding: 26px;
+    border-radius: 8px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.04);
+    list-style: none;
+    cursor: pointer;
+    text-decoration: none;
+    border: 2px solid transparent;
+    transition: border 0.5s ease;
+}
+
+.card-list .card-item:hover{
+    border: 2px solid #19a463;
+}
+
+.card-list .card-item img{
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.card-list span{
+    display: inline-block;
+    background: #f7DFF5;
+    margin-top: 32px;
+    padding: 8px 15px;
+    font-size: 0.75rem;
+    border-radius: 50px;
+    font-weight: 600;
+}
+
+.card-list .developer{
+    background-color: #f7DFF5;
+    color: #B22485;
+}
+
+.card-list .designer{
+    background-color: #d1e8ff;
+    color: #2968a8;
+}
+
+.card-list .editor{
+    background-color: #d6f8df;
+    color: #205c20;
+}
+
+.card-item h3{
+    color: #000;
+    font-size: 1.438rem;
+    margin-top: 28px;
+    font-weight: 600;
+}
+
+.card-item .arrow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(-35deg);
+    height: 40px;
+    width: 40px;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 50%;
+    margin-top: 40px;
+    transition: 0.2s ease;
+}
+
+.card-list .card-item:hover .arrow{
+    background: #000;
+    color: #fff;
+}
+
+@media (max-width: 1200px) {
+    .card-list .card-item{
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .card-list{
+        margin: 0 auto;
+    }
+}
+
+footer{
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1;
+    padding: 20px;
+}
+
+ /* .footer-row {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 1480px;
+    width: 100%;
+    background: #10182f;
+} */
+
+.footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 3.5rem;
+    padding: 60px;
+}
+
+.footer-row .footer-col h4 {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.footer-col .links {
+    margin-top: 20px;
+}
+
+.footer-col .links li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.footer-col .links li a {
+    text-decoration: none;
+    color: #bfbfbf;
+}
+
+.footer-col .links li a:hover {
+    color: #fff;
+}
+
+.footer-col p {
+    margin: 20px 0;
+    color: #bfbfbf;
+    max-width: 300px;
+}
+
+.footer-col form {
+    display: flex;
+    gap: 5px;
+}
+
+.footer-col input {
+    height: 40px;
+    border-radius: 6px;
+    background: none;
+    width: 100%;
+    outline: none;
+    border: 1px solid #7489C6;
+    caret-color: #fff;
+    padding-left: 10px;
+}
+
+.footer-col input::placeholder {
+    color: #ccc;
+}
+
+.footer-col form button {
+    background: #fff;
+    outline: none;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.2s ease; 
+}
+
+.footer-col form button:hover {
+    background: #cecccc;
+}
+
+.footer-col .icons {
+    display: flex;
+    margin-top: 30px;
+    gap: 30px;
+    cursor: pointer;
+}
+
+.footer-col .icons i {
+    color: #afb6c7;
+}
+
+.footer-col .icons i:hover {
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    /* .footer {
+        position: relative;
+        bottom: 0;
+        left: 0;
+        transform: none;
+        width: 100%;
+        border-radius: 0;
+    } */
+
+     .footer-row {
+        padding: 20px;
+        gap: 1rem;
+    }
+
+    .footer-col form {
+        display: block;
+    }
+
+    .footer-col form :where(input, button) {
+        width: 100%;
+    }
+
+    .footer-col form button {
+        margin: 10px 0 0;
+    }
+}
